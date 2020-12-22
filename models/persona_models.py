@@ -6,10 +6,6 @@ class CredencialIn(BaseModel):
     username    : str
     password    : str
 
-class PersonaOut(BaseModel):
-    username    : str
-    balance     : int
-
     class Config:
         orm_mode = True
 
@@ -28,6 +24,9 @@ class PersonaUpdateIn(BaseModel):
     per_documento:Optional[int] = None
     per_numero:Optional[str] = None
     per_email:Optional[str] = None
+
+    class Config:
+        orm_mode = True
 
 class PersonaIdIn(BaseModel):
     id:int
@@ -48,3 +47,6 @@ class PersonaIn(BaseModel):
     per_email:str
     per_creado:datetime = datetime.now()
     per_modificado:datetime = datetime.now()
+
+    class Config:
+        orm_mode = True

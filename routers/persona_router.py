@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import exc, desc
 from db.db_connection import get_db
 from db.persona_db import PersonaCredencialInDB, PersonaInDB
-from models.persona_models import CredencialIn, PersonaOut,PersonaIdIn,PersonaIn,PersonaUpdateIn
+from models.persona_models import CredencialIn,PersonaIdIn,PersonaIn,PersonaUpdateIn
 from routers.auxiliar import mensaje
 
 reservas = APIRouter()
