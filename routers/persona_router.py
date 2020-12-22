@@ -31,7 +31,7 @@ async def get_person(id: int, db: Session = Depends(get_db)):
         person_out = user_in_db
         return person_out
 
-@reservas.get("/user/list")
+@reservas.get("/users/list")
 async def get_list_person(db: Session = Depends(get_db)):
     person_in_db = db.query(PersonaInDB).all()
     if person_in_db == None:
