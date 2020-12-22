@@ -6,9 +6,6 @@ class CredencialIn(BaseModel):
     username    : str
     password    : str
 
-    class Config:
-        orm_mode = True
-
 class PersonaUpdateIn(BaseModel):
     per_id:int
     per_nombre1:Optional[str] = None
