@@ -13,21 +13,21 @@ class PersonaOut(BaseModel):
     class Config:
         orm_mode = True
 
-class PersonUpdateIn(BaseModel):
-    id:int
-    nombre1:Optional[str] = None
-    nombre2:Optional[str] = None
-    apellido1:Optional[str] = None
-    apellido2:Optional[str] = None
-    fecha_nacimiento:Optional[datetime] = None
-    nacionalidad:Optional[int] = None
-    numeroDeContacto:Optional[str] = None
-    direccion:Optional[str] = None
-    ubicacion:Optional[int] = None
-    otra:Optional[str] = None
-    documento:Optional[int] = None
-    numero:Optional[str] = None
-    email:Optional[str] = None
+class PersonaUpdateIn(BaseModel):
+    per_id:int
+    per_nombre1:Optional[str] = None
+    per_nombre2:Optional[str] = None
+    per_apellido1:Optional[str] = None
+    per_apellido2:Optional[str] = None
+    per_fecha_nacimiento:Optional[datetime] = None
+    per_nacionalidad:Optional[int] = None
+    per_numero_contacto:Optional[str] = None
+    per_direccion:Optional[str] = None
+    per_ubicacion:Optional[int] = None
+    per_otra:Optional[str] = None
+    per_documento:Optional[int] = None
+    per_numero:Optional[str] = None
+    per_email:Optional[str] = None
 
 class PersonaIdIn(BaseModel):
     id:int
