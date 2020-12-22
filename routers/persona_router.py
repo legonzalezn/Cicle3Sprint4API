@@ -1,4 +1,4 @@
-from typing import List
+#from typing import List
 from fastapi import Depends, APIRouter, HTTPException
 from sqlalchemy.orm import Session
 from sqlalchemy import exc
