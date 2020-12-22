@@ -21,4 +21,4 @@ def get_db():
         db.close()
 
 Base = declarative_base()
-Base.metadata.schema = schema
+Base.metadata.schema = "Reservas"
