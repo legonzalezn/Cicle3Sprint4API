@@ -22,9 +22,9 @@ async def auth_user(user_in: CredencialIn, db: Session = Depends(get_db)):
 
     return  {"username": user_in_db.per_cre_nickname,"id":user_in_db.per_cre_id}
 
-@reservas.get("/user")
-async def get_person(person_in:PersonaIdIn, db: Session = Depends(get_db)):
-    user_in_db = db.query(PersonaInDB).get(person_in.id)
+@reservas.get("/user/{id}")
+async def get_person(id: int, db: Session = Depends(get_db)):
+    user_in_db = db.query(PersonaInDB).get(id)
     if user_in_db == None:
         raise HTTPException(status_code=404, detail = mensaje(1,"usuario"))
     else:
