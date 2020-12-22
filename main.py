@@ -13,7 +13,6 @@ workspace=[
     , "http://127.0.0.1:8080"
     , "http://127.0.0.1"
     , "https://reserva-hotel-appvue.herokuapp.com"
-    , "http://190.69.231.174"
 ]
 
 origins = workspace
