@@ -6,6 +6,9 @@ class CredencialIn(BaseModel):
     username    : str
     password    : str
 
+    class Config:
+        orm_mode = True
+
 class PersonaUpdateIn(BaseModel):
     per_id:int
     per_nombre1:Optional[str] = None
@@ -27,6 +30,9 @@ class PersonaUpdateIn(BaseModel):
 
 class PersonaIdIn(BaseModel):
     id:int
+
+    class Config:
+        orm_mode = True
 
 class PersonaIn(BaseModel):
     per_nombre1:str

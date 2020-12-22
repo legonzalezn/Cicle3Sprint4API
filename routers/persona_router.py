@@ -20,7 +20,7 @@ async def auth_user(user_in: CredencialIn, db: Session = Depends(get_db)):
     if not user_in_db.per_cre_contrasegna == user_in.password:
         raise HTTPException(status_code=403, detail="Error de autenticacion")
 
-    return  {"Autenticado": True}
+    return  {"username": user_in_db.per_cre_nickname,"id":user_in_db.per_cre_id}
 
 @reservas.get("/user")
 async def get_person(person_in:PersonaIdIn, db: Session = Depends(get_db)):
